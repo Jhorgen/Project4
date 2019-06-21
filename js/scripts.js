@@ -3,18 +3,22 @@
 // Holds total customer order information
 function TotalOrder() {
   this.orders = [];
+  console.log(this.orders);
 };
 
-TotalOrder.prototype.addOrder = function (PizzaConstructor) {
+
+TotalOrder.prototype.addOrder = function(PizzaConstructor) {
   this.orders.push(PizzaConstructor);
 
 };
 
-// Template for each pizza
-function PizzaConstructor(toppings, size) {
-  this.toppings = toppings,
-  this.size = size,
-};
+function PizzaConstructor(size, toppings){
+this.size = size,
+this.toppings = toppings,
+this.pizzaID = pizzaID += 1;
+
+console.log(PizzaConstructor);
+}
 
 
 
@@ -28,7 +32,20 @@ function PizzaConstructor(toppings, size) {
 
 
 //----------------------------------UI lOGIC----------------------------------//
+var orderForm = new TotalOrder();
+var pizzaID = 0;
 
 $(document).ready(function(){
-  var orderForm = new TotalOrder();
+  $("#toppingButton").click(function() {
+    var toppings = $("input[name='pizzaTopping']:checked").val();
+    console.log(toppings);
+
+  });
+$('#sizeButton').click(function() {
+  var inputSize = $("input[name='pizzaSize']:checked").val();
+  console.log(inputSize);
+  orderForm.addOrder(newPizza);
+});
+
+var newPizza = new PizzaConstructor(inputSize, toppings, pizzaID)
 });

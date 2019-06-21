@@ -14,26 +14,30 @@
     <form class="formDiv">
 
       <h2>Size</h2>
-      <input id="sizeSmall" type="radio" name="pizzaSize" value="small"> Small - $8
-      <input id="sizeMedium" type="radio" name="pizzaSize" value="medium"> Medium - $10
-      <input id="sizeLarge" type="radio" name="pizzaSize" value="large"> Large - $12<br>
+      <input id="pizzaSize" type="radio" name="pizzaSize" value="small"> Small - $8
+      <input id="pizzaSize" type="radio" name="pizzaSize" value="medium"> Medium - $10
+      <input id="pizzaSize" type="radio" name="pizzaSize" value="large"> Large - $12<br>
+      <button id="sizeButton" class="btn btn-success" type="button" name="button">Add</button>
 
       <h2 class="h2-toppings">Toppings - $2 each!</h2><br>
 
       <h3>Protein</h3>
-      <input type="checkbox" name="pizzaTopping" value=""> Chicken<br>
+      <input type="checkbox" name="pizzaTopping" value="Chicken"> Chicken<br>
       <input type="checkbox" name="pizzaTopping" value=""> Beef<br>
       <input type="checkbox" name="pizzaTopping" value=""> Ham<br>
       <input type="checkbox" name="pizzaTopping" value=""> Pepperoni<br>
 
-
       <h3>Veggies</h3>
-      <input type="checkbox" name="pizzaTopping" value=""> Onion<br>
+      <input type="checkbox" name="pizzaTopping" value="Onion"> Onion<br>
       <input type="checkbox" name="pizzaTopping" value=""> Bell Pepper<br>
       <input type="checkbox" name="pizzaTopping" value=""> Mushroom<br>
       <input type="checkbox" name="pizzaTopping" value=""> Spinach<br>
+      <button id="toppingButton" class="btn btn-success" type="button" name="button">Add</button><br><br>
 
+      <button id="totalButton" type="button" name="button">Total</button>
     </form>
+
+    <div class="ouput"></div>
   </div>
 
 </body>
