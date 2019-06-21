@@ -1,24 +1,21 @@
 //-----------------------------------BUSINESS LOGIC---------------------------//
 
 // Holds total customer order information
-function TotalOrder(add, add, add) {
-  this.
-  this.
-  This.
-}
-
-// Template for each pizza
-function PizzaConstructor(add, add, add) {
-  this.
-  this.
-  this.
-  this.
+function TotalOrder() {
+  this.orders = [];
 };
 
 TotalOrder.prototype.addOrder = function (PizzaConstructor) {
-  //
+  this.orders.push(PizzaConstructor);
 
 };
+
+// Template for each pizza
+function PizzaConstructor(toppings, size) {
+  this.toppings = toppings,
+  this.size = size,
+};
+
 
 
 
