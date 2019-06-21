@@ -12,7 +12,8 @@ function PizzaConstructor(inputSize, toppings){
   this.pizzaID = pizzaID += 1;
 
   TotalOrder.prototype.addOrder = function(PizzaConstructor) {
-    this.orders.push(PizzaConstructor);
+    this.orders.push(inputSize);
+    this.orders.push(toppings);
   };
 
   TotalOrder.prototype.addTopping = function(size) {
@@ -32,8 +33,10 @@ function PizzaConstructor(inputSize, toppings){
 
 
 
-var toppingArray = [];
-// var newPizza = new PizzaConstructor(inputSize, toppings, pizzaID);
+
+
+
+
 
 
 
@@ -41,31 +44,27 @@ var toppingArray = [];
 
 
 //----------------------------------UI lOGIC----------------------------------//
+
 var orderForm = new TotalOrder();
 var pizzaID = 0;
-
-
+var inputSize = $("input[name='pizzaSize']:checked").val();
+var newPizza = new PizzaConstructor(inputSize, toppings, pizzaID);
+var toppings = $("input[name='pizzaTopping']:checked").val();
 
 $(document).ready(function(){
-  var sizeArray = TotalOrder.orders;
-
-  function addThis() {
-
-
-  };
 
   $("#sizeButton").click(function() {
-    var inputSize = $("input[name='pizzaSize']:checked").val();
+    addThis();
     console.log(inputSize);
-    sizeArray.push(inputSize);
+    $('input[name="pizzaSize"]:checked').each(function() {
+    newPizza.addOrder($(this).val());
     console.log(sizeArray)
   });
 
   $('#toppingButton').click(function() {
-    var toppings = $("input[name='pizzaTopping']:checked").val();
     console.log(toppings);
     $("input[name='pizzaTopping']:checked").each(function() {
-      toppingArray.Push(toppings);
+      newPizza.addOrder(toppings);
     });
   });
 
@@ -75,4 +74,5 @@ $(document).ready(function(){
   //     newPizza.addorder($(this).val());
   //   });
   // };
+});
 });
