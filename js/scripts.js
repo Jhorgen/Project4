@@ -12,11 +12,10 @@ function PizzaConstructor(inputSize, toppings){
   this.pizzaID = pizzaID += 1;
 };
 
-  TotalOrder.prototype.addOrder = function(PizzaConstructor) {
-    this.orders.push(inputSize);
-    this.orders.push(toppings);
+  TotalOrder.prototype.addOrder = function(addPizza) {
+    this.orders.push(addPizza);
   };
-
+  //
   TotalOrder.prototype.addTopping = function(size) {
     this.orders.push(inputSize)
   }
@@ -48,19 +47,23 @@ function PizzaConstructor(inputSize, toppings){
 var orderForm = new TotalOrder();
 var pizzaID = 0;
 
-$("#totalButton").click(function() {
   var inputSize = $("input[name='pizzaSize']:checked").val();
   var toppings = $("input[name='pizzaTopping']:checked").val();
   var newPizza = new PizzaConstructor(inputSize, toppings, pizzaID);
+
+
+$(document).ready(function(){
+  var inputSize = $("input[name='pizzaSize']:checked").val();
   $('input[name="pizzaSize"]:checked').each(function() {
     orderForm.newPizza.addOrder($(this).val());
     console.log(inputSize);
   });
+
   $("input[name='pizzaTopping']:checked").each(function() {
+    var toppings = $("input[name='pizzaTopping']:checked").val();
     orderForm.newPizza.addOrder($(this).val());
+  });
+  $('totalButton').click(function(){
+    $('.output').append(test);
 });
-});
-
-$(document).ready(function(event){
-
 });
