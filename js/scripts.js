@@ -6,18 +6,25 @@ function TotalOrder() {
   console.log(this.orders);
 };
 
+function PizzaConstructor(inputSize, toppings){
+  this.size = inputSize,
+  this.toppings = toppings,
+  this.pizzaID = pizzaID += 1;
 
-TotalOrder.prototype.addOrder = function(PizzaConstructor) {
-  this.orders.push(PizzaConstructor);
+  TotalOrder.prototype.addOrder = function(PizzaConstructor) {
+    this.orders.push(PizzaConstructor);
+  };
 
-};
+  TotalOrder.prototype.addTopping = function(size) {
+    this.orders.push(inputSize)
+  }
 
-function PizzaConstructor(size, toppings){
-this.size = size,
-this.toppings = toppings,
-this.pizzaID = pizzaID += 1;
+  TotalOrder.prototype.addTopping = function(topping) {
+    this.orders.push(toppings)
+  }
 
-console.log(PizzaConstructor);
+
+  console.log(PizzaConstructor);
 }
 
 
@@ -25,6 +32,8 @@ console.log(PizzaConstructor);
 
 
 
+var toppingArray = [];
+// var newPizza = new PizzaConstructor(inputSize, toppings, pizzaID);
 
 
 
@@ -35,17 +44,35 @@ console.log(PizzaConstructor);
 var orderForm = new TotalOrder();
 var pizzaID = 0;
 
+
+
 $(document).ready(function(){
-  $("#toppingButton").click(function() {
+  var sizeArray = TotalOrder.orders;
+
+  function addThis() {
+
+
+  };
+
+  $("#sizeButton").click(function() {
+    var inputSize = $("input[name='pizzaSize']:checked").val();
+    console.log(inputSize);
+    sizeArray.push(inputSize);
+    console.log(sizeArray)
+  });
+
+  $('#toppingButton').click(function() {
     var toppings = $("input[name='pizzaTopping']:checked").val();
     console.log(toppings);
-
+    $("input[name='pizzaTopping']:checked").each(function() {
+      toppingArray.Push(toppings);
+    });
   });
-$('#sizeButton').click(function() {
-  var inputSize = $("input[name='pizzaSize']:checked").val();
-  console.log(inputSize);
-  orderForm.addOrder(newPizza);
-});
 
-var newPizza = new PizzaConstructor(inputSize, toppings, pizzaID)
+
+  // function orderPizza() {
+  //   $('newPizza').each(function() {
+  //     newPizza.addorder($(this).val());
+  //   });
+  // };
 });
