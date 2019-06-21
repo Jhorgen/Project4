@@ -5,11 +5,12 @@ function TotalOrder() {
   this.orders = [];
   console.log(this.orders);
 };
-
+console.log(TotalOrder.orders);
 function PizzaConstructor(inputSize, toppings){
   this.size = inputSize,
   this.toppings = toppings,
   this.pizzaID = pizzaID += 1;
+};
 
   TotalOrder.prototype.addOrder = function(PizzaConstructor) {
     this.orders.push(inputSize);
@@ -25,8 +26,7 @@ function PizzaConstructor(inputSize, toppings){
   }
 
 
-  console.log(PizzaConstructor);
-}
+
 
 
 
@@ -47,32 +47,20 @@ function PizzaConstructor(inputSize, toppings){
 
 var orderForm = new TotalOrder();
 var pizzaID = 0;
-var inputSize = $("input[name='pizzaSize']:checked").val();
-var newPizza = new PizzaConstructor(inputSize, toppings, pizzaID);
-var toppings = $("input[name='pizzaTopping']:checked").val();
 
-$(document).ready(function(){
-
-  $("#sizeButton").click(function() {
-    addThis();
+$("#totalButton").click(function() {
+  var inputSize = $("input[name='pizzaSize']:checked").val();
+  var toppings = $("input[name='pizzaTopping']:checked").val();
+  var newPizza = new PizzaConstructor(inputSize, toppings, pizzaID);
+  $('input[name="pizzaSize"]:checked').each(function() {
+    orderForm.newPizza.addOrder($(this).val());
     console.log(inputSize);
-    $('input[name="pizzaSize"]:checked').each(function() {
-    newPizza.addOrder($(this).val());
-    console.log(sizeArray)
   });
-
-  $('#toppingButton').click(function() {
-    console.log(toppings);
-    $("input[name='pizzaTopping']:checked").each(function() {
-      newPizza.addOrder(toppings);
-    });
-  });
-
-
-  // function orderPizza() {
-  //   $('newPizza').each(function() {
-  //     newPizza.addorder($(this).val());
-  //   });
-  // };
+  $("input[name='pizzaTopping']:checked").each(function() {
+    orderForm.newPizza.addOrder($(this).val());
 });
+});
+
+$(document).ready(function(event){
+
 });
