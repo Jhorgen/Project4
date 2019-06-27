@@ -1,69 +1,39 @@
 //-----------------------------------BUSINESS LOGIC---------------------------//
 
-// Holds total customer order information
 function TotalOrder() {
   this.orders = [];
   console.log(this.orders);
 };
-console.log(TotalOrder.orders);
-function PizzaConstructor(inputSize, toppings){
+
+function PizzaConstructor(inputSize, toppings) {
   this.size = inputSize,
-  this.toppings = toppings,
-  this.pizzaID = pizzaID += 1;
+  this.toppings = toppings;
 };
 
-  TotalOrder.prototype.addOrder = function(addPizza) {
-    this.orders.push(addPizza);
-  };
-  //
-  TotalOrder.prototype.addTopping = function(size) {
-    this.orders.push(inputSize)
-  }
-
-  TotalOrder.prototype.addTopping = function(topping) {
-    this.orders.push(toppings)
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+TotalOrder.prototype.addOrder = function (addPizza) {
+  this.orders.push(addPizza);
+};
 
 //----------------------------------UI lOGIC----------------------------------//
 
-var orderForm = new TotalOrder();
-var pizzaID = 0;
+// var orderForm = new TotalOrder();
 
-  var inputSize = $("input[name='pizzaSize']:checked").val();
-  var toppings = $("input[name='pizzaTopping']:checked").val();
-  var newPizza = new PizzaConstructor(inputSize, toppings, pizzaID);
+// var inputSize = $("input[name='pizzaSize']:checked").val();
+//
+// var toppings = $("input[name='pizzaTopping']:checked").val();
 
-
-$(document).ready(function(){
-  var inputSize = $("input[name='pizzaSize']:checked").val();
-  $('input[name="pizzaSize"]:checked').each(function() {
-    orderForm.newPizza.addOrder($(this).val());
+$(document).ready(function () {
+  $('.formDiv').submit(function (event) {
+    event.preventDefault();
+    var inputSize = $('input:radio[name=pizzaSize]:checked').val();
     console.log(inputSize);
-  });
 
-  $("input[name='pizzaTopping']:checked").each(function() {
-    var toppings = $("input[name='pizzaTopping']:checked").val();
-    orderForm.newPizza.addOrder($(this).val());
+    var toppings = $('input[name=pizzaTopping]:checked').each(function () {
+      orderForm.newPizza.addOrder($(this).val());
+      console.log(toppings);
+
+      var newPizza = new PizzaConstructor(inputSize, toppings);
+    });
+
   });
-  $('totalButton').click(function(){
-    $('.output').append(test);
-});
 });
