@@ -2,10 +2,10 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
-  <script type="text/javascript" src="js/scripts.js"></script>
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
   <title>Hawthorne Pies</title>
 </head>
 <body>
@@ -20,7 +20,7 @@
       <!-- <button id="sizeButton" class="btn btn-success" type="button" name="button">Add</button> -->
 
       <h2 class="h2-toppings">Toppings - $2 each!</h2>
-
+      <div id="theseCheck">
       <h3>Protein</h3>
       <input type="checkbox" name="pizzaTopping" value="2"> Chicken<br>
       <input type="checkbox" name="pizzaTopping" value="2"> Beef<br>
@@ -32,10 +32,11 @@
       <input type="checkbox" name="pizzaTopping" value="2"> Bell Pepper<br>
       <input type="checkbox" name="pizzaTopping" value="2"> Mushroom<br>
       <input type="checkbox" name="pizzaTopping" value="2"> Spinach<br>
+    </div>
       <!-- <button id="toppingButton" class="btn btn-success" type="button" name="button">Add</button><br><br> -->
 <br><br>
       <button id="totalButton" type="submit">Total</button>
-    </form>
+    </form><br>
 
     <div class="output"></div>
   </div>
