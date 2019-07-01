@@ -3,18 +3,23 @@
 function TotalOrder() {
   this.orders = [];
   console.log(this.orders);
-  this.currentId = 0
-
 };
 
-function PizzaConstructor(totalCost) {
-  this.cost = totalCost
+function PizzaConstructor(inputSize, toppings) {
+  this.size = inputSize,
+  this.toppings = toppings;
 };
 
 TotalOrder.prototype.addOrder = function (addPizza) {
   this.orders.push(addPizza);
-  this.currentId += 1;
 };
+
+TotalOrder.prototype.pizzaCost = function(addCost) {
+var newOrder = this.orders;
+if (newOrder.orders.includes('10')) {
+  console.log('hello world');
+}
+}
 
 
 //----------------------------------UI lOGIC----------------------------------//
@@ -31,16 +36,13 @@ $(document).ready(function () {
       toppings += parseInt(this.value, 10);
     });
 
-    const total = inputSize + toppings;
-
-    var newPizza = new PizzaConstructor(totalCost);
-
-    orderForm.addOrder(newPizza)
+    // const total = inputSize + toppings;
+    var newPizza = new PizzaConstructor(inputSize, toppings);
+    orderForm.addOrder(newPizza);
 
     console.log(newPizza);
 
-    $('.output').text(orderForm.orders);
-
+      // orderForm.addOrder(total);
 
   });
 });
