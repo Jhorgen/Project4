@@ -2,7 +2,6 @@
 
 function TotalOrder() {
   this.orders = [];
-  console.log(this.orders);
 };
 
 function PizzaConstructor(inputSize, toppings) {
@@ -14,12 +13,10 @@ TotalOrder.prototype.addOrder = function (addPizza) {
   this.orders.push(addPizza);
 };
 
-TotalOrder.prototype.pizzaCost = function(addCost) {
-var newOrder = this.orders;
-if (newOrder.orders.includes('10')) {
-  console.log('hello world');
+PizzaConstructor.prototype.pizzaCost = function() {
+  return this.size + this.toppings;
 }
-}
+
 
 
 //----------------------------------UI lOGIC----------------------------------//
@@ -36,13 +33,10 @@ $(document).ready(function () {
       toppings += parseInt(this.value, 10);
     });
 
-    // const total = inputSize + toppings;
     var newPizza = new PizzaConstructor(inputSize, toppings);
     orderForm.addOrder(newPizza);
 
-    console.log(newPizza);
-
-      // orderForm.addOrder(total);
+    $('.output').text(newPizza.pizzaCost());
 
   });
 });
