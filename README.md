@@ -1,6 +1,6 @@
 # _Hawthorne Pies_ - Pizza order form
 
-Allows a user to select a pizza by size, select toppings, and recieve a priced based on their selection.
+Allows a user to create a pizza by selecting pizza size & toppings. On submit, the application returns a priced based on their selection.
 
 
 ## Specs
