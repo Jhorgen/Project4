@@ -35,7 +35,7 @@ drag the _index.html_ file into your browser's tab section
 ## Built With
 
 * [jQuery]
-* [HTML](https://rubyonrails.org/)
+* [HTML] (https://www.w3.org/html/)
 * [CSS]
 * [Bootstrap 4]
 
