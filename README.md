@@ -29,7 +29,9 @@ Or download and install it locally.
 
 ```
 $cd pizza-order-form
+
 open files in your IDE / text editor
+
 drag the _index.html_ file into your browser's tab section
 
 ``` 
@@ -48,7 +50,7 @@ drag the _index.html_ file into your browser's tab section
 
 ## License
 
-Open source (c) 2019 _**Josh Horgen**_
+Open source (c) 2019 Josh Horgen
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
