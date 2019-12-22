@@ -1,4 +1,4 @@
-# Hawthorne Pies - Pizza order form
+# _Hawthorne Pies_ - Pizza order form
 
 Allows a user to select a pizza by size, select toppings, and recieve a priced based on their selection.
 
