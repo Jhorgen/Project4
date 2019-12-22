@@ -2,8 +2,6 @@
  
 ### Pizza order form
 
-###### By _Josh Horgen, 2019_
-
 Allows a user to select a pizza by size, select toppings, and recieve a priced based on their selection.
 
 
