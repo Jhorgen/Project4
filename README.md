@@ -35,7 +35,7 @@ drag the _index.html_ file into your browser's tab section
 ## Built With
 
 * [jQuery](https://jquery.com/)
-* Vanilla [Javascript](https://www.javascript.com/)
+* [Vanilla Javascript](https://www.javascript.com/)
 * [HTML](https://www.w3.org/html/)
 * [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
 * [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
