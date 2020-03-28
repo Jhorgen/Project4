@@ -19,7 +19,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Setup & Deployment
 
-You can view the live application here: http://murmuring-shore-14390.herokuapp.com/api/v1/ideas
+You can view the live application here: https://jhorgen.github.io/pizza-order-form/
 
 Or download and install it locally.
 
